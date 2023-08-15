@@ -7,17 +7,17 @@ import React from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'Tesis Bruno Gallardo',
-  description: 'Tesis final de grado, carrera Arquitectura, Universidad Nacional de Córdoba, alumno: Bruno Gallardo, dni: 37900207 ',
-}
-
-
-
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet='UTF-8' />
+        <meta 
+        name='Tesis Bruno Gallardo'
+        content='Tesis final de grado, carrera Arquitectura, Universidad Nacional de Córdoba, alumno: Bruno Gallardo, dni: 37900207'/>
+        <title>Tesis Bruno Gallardo</title>
+      </head>
       <body className={`min-h-screen {inter.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div>
