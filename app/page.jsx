@@ -4,7 +4,7 @@ import './globals.css'
 import { useState, useEffect } from 'react';
 import Presentation from './Presentation/page';
 import { useTheme } from 'next-themes';
-import Particles from './Components/particles';
+import Particles from './Components/particles.tsx';
 
 export default function Home() {
   const { systemTheme, theme } = useTheme();

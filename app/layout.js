@@ -1,12 +1,11 @@
 "use client"
 
 import { Inter } from 'next/font/google'
-import { ThemeProvider } from './Components/theme-provider'
-import { ModeToggle } from './Components/mode-toggle'
+import { ThemeProvider } from './Components/theme-provider.tsx'
+import { ModeToggle } from './Components/mode-toggle.tsx'
 import React from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
-
 
 export default function RootLayout({ children }) {
   return (
