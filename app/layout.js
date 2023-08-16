@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div>
             <header className='flex relative justify-end px-24' >
-              <div className='mt-4 mw-full'>
+              <div className='fixed top-0 mt-4 mw-full'>
               <ModeToggle />
               </div>
             </header>
