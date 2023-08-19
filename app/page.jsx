@@ -1,5 +1,6 @@
 "use client"
 
+import React from 'react';
 import './globals.css'
 import { useState, useEffect } from 'react';
 import Presentation from './Presentation/page';
@@ -16,11 +17,11 @@ export default function Home() {
 
   return (
     <>
-    <Particles
+      <Particles
 				className="absolute inset-0 -z-10 animate-fade-in"
 				quantity={100}
 			/>
-      <Presentation />
+        <Presentation />
     </>
   );
 }

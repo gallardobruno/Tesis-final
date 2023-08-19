@@ -1,6 +1,28 @@
+"use client"
 
-export default function stageOne() {
+import React from 'react';
+import { useState } from 'react';
+
+export default function StageOne() {
+  const [estadoEtapa, setEstadoEtapa] = useState("noIniciada");
+
+  const handleContinuar = () => {
+    setEstadoEtapa('enProceso');
+  };
+
+  const handleCompletado = () => {
+    setEstadoEtapa('completada');
+  };
+
   return (
+    <div>
+
+      {estadoEtapa === 'noIniciada' && (
+        <button onClick={handleContinuar} className="btn-comenzar">
+          Comencemos
+        </button>
+      )}
+
 <div fondo className="flex-col">
 
   <div paginas className="flex justify-center w-full h-screen bg-black">
@@ -64,6 +86,24 @@ export default function stageOne() {
  
 </div>
 
+{estadoEtapa === 'enProceso' && (
+        <div>
+          {/* Contenido de la etapa en proceso */}
+          <p>Trabajando en esta etapa...</p>
+          <button onClick={handleCompletado} className="btn-completada">
+            Completada
+          </button>
+        </div>
+      )}
 
-  )
+{estadoEtapa === 'completada' && (
+        <div>
+          {/* Contenido de la etapa completada */}
+          <p>Esta etapa ha sido completada.</p>
+        </div>
+      )}
+
+</div>
+
+  );
 }

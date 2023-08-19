@@ -1,8 +1,12 @@
+"use client"
+
+import React from 'react';
 import Image from 'next/image'
 import logo from '../../public/logos-1.png' 
 import Link from "next/link";
 
 export default function Presentation() {
+  // const { estadoEtapa } = useAppState();
 
   return (
  <div>
@@ -20,7 +24,21 @@ export default function Presentation() {
       </div>
 
       <div className="mt-11 mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-      <Link href='/stageOne'>
+      {/* <Link href='/stageOne'>
+          <div
+          className={`group rounded-lg border border-transparent px-5 py-4 transition-colors ${
+            estadoEtapa === 'noIniciada' 
+            ? 'bg-red-500'
+            : estadoEtapa === 'enProceso'
+            ? 'bg-orange-500'
+            : estadoEtapa === 'completada'
+            ? 'bg-green-500'
+            : ''
+          } hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 bg-transparent`}
+          target="_blank"
+          rel="noopener noreferrer" */}
+
+          <Link href='/stageOne'>
           <div
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 bg-transparent"
           target="_blank"
