@@ -1,32 +1,37 @@
 "use client"
 
 import React from 'react';
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { añadirEtapa } from '../../store/SliceOne';
 
 export default function StageOne() {
-  const [estadoEtapa, setEstadoEtapa] = useState("noIniciada");
+  const dispatch=useDispatch();
+  const estadoEtapa1 = useSelector(state => state.misValores.estadoEtapa);
+  console.log(`el estado de StageOne es ${estadoEtapa1}`)
 
   const handleContinuar = () => {
-    setEstadoEtapa('enProceso');
+    console.log('Dispatching acción añadirEtapa');
+    dispatch(añadirEtapa('enProceso'))
   };
 
   const handleCompletado = () => {
-    setEstadoEtapa('completada');
+    dispatch(añadirEtapa('completada'));
   };
 
   return (
-    <div>
+    <div className="flex-col sm:mx-4 md:mx-4"> 
 
-      {estadoEtapa === 'noIniciada' && (
+<div>
+{estadoEtapa1 === 'noIniciada' && (
         <button onClick={handleContinuar} className="btn-comenzar">
           Comencemos
         </button>
       )}
+</div>
+      
 
-<div fondo className="flex-col">
-
-  <div paginas className="flex justify-center w-full h-screen bg-black">
-    <div contenido className="flex-col flex items-center justify-center max-w-5xl w-full text-white">
+  <div className="flex justify-center w-full h-screen sm:items-center bg-black">
+    <div className="flex-col flex items-center justify-center max-w-5xl w-full text-white">
       <h1 className="font-sans text-5xl font-semibold ">
       ETAPA 1
       </h1><br/>
@@ -34,8 +39,8 @@ export default function StageOne() {
     </div>
   </div>
 
-  <div paginas className="flex justify-center w-full h-screen">
-    <div contenido className="max-w-5xl w-full">
+  <div className="flex justify-center w-full h-screen sm:py-10">
+    <div className="max-w-5xl w-full">
      <div className="pt-32">
       <p className="font-semibold">ETAPA 1 | ESTUDIO DEL TEMA PROBLEMA</p>
       1 | Montaje del proceso de tesis / Agendas sociales oportunas del hábitat Latinoamericano <br/>
@@ -45,8 +50,8 @@ export default function StageOne() {
     </div>
   </div>
 
-  <div paginas className="flex justify-center w-full h-screen">
-    <div contenido className="max-w-5xl w-full">
+  <div className="flex justify-center w-full h-screen sm:relative">
+    <div className="max-w-5xl w-full">
     <div className="flex justify-end text-white"><p className="bg-black">Pág 01</p></div><br/>
      <section className="pt-22">
       <p className="text-2xl font-semibold">PROPUESTA DE ESCENARIO:</p><br/>
@@ -56,8 +61,8 @@ export default function StageOne() {
     </div>
   </div>
 
-  <div paginas className="flex justify-center w-full h-screen">
-    <div contenido className="max-w-5xl w-full">
+  <div className="flex justify-center w-full h-screen sm:relative sm:pt-80">
+    <div className="max-w-5xl w-full">
     <div className="flex justify-end text-white"><p className="bg-black">Pág 02</p></div><br/>
      <section className="">
       <p className="text-2xl font-semibold">PROBLEMA:</p><br/>
@@ -70,8 +75,8 @@ export default function StageOne() {
     </div>
   </div>
 
-  <div paginas className="flex justify-center w-full h-screen">
-    <div contenido className="max-w-5xl w-full">
+  <div className="flex justify-center w-full h-screen sm:relative sm:pt-80">
+    <div className="max-w-5xl w-full">
     <div className="flex justify-end text-white"><p className="bg-black">Pág 03</p></div>
      <section className="">
       <p className="text-2xl font-semibold">PREMISAS:</p><br/>
@@ -83,10 +88,9 @@ export default function StageOne() {
      </section>
     </div>
   </div>
- 
-</div>
 
-{estadoEtapa === 'enProceso' && (
+<div className='flex justify-center sm:relative sm:mt-4'>
+{estadoEtapa1 === 'enProceso' && (
         <div>
           {/* Contenido de la etapa en proceso */}
           <p>Trabajando en esta etapa...</p>
@@ -96,14 +100,16 @@ export default function StageOne() {
         </div>
       )}
 
-{estadoEtapa === 'completada' && (
+{estadoEtapa1 === 'completada' && (
         <div>
           {/* Contenido de la etapa completada */}
           <p>Esta etapa ha sido completada.</p>
         </div>
       )}
+</div>
 
 </div>
+
 
   );
 }
