@@ -61,7 +61,7 @@ export default function StageOne() {
     </div>
   </div>
 
-  <div className="flex justify-center w-full h-screen sm:relative sm:pt-80">
+  <div className="flex justify-center w-full h-screen sm:relative sm:pt-20">
     <div className="max-w-5xl w-full">
     <div className="flex justify-end text-white"><p className="bg-black">Pág 02</p></div><br/>
      <section className="">
@@ -75,7 +75,7 @@ export default function StageOne() {
     </div>
   </div>
 
-  <div className="flex justify-center w-full h-screen sm:relative sm:pt-80">
+  <div className="flex justify-center w-full h-screen sm:relative sm:pt-100">
     <div className="max-w-5xl w-full">
     <div className="flex justify-end text-white"><p className="bg-black">Pág 03</p></div>
      <section className="">
