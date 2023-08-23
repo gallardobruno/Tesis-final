@@ -2,13 +2,14 @@ import Image from 'next/image';
 import logo from '../../public/logos-1.png'; 
 import Link from 'next/link';
 import { StateStage } from '../Badges/StateStage';
+import qr from '../../public/frame .png'
 
 export default function Presentation() {  
 
   return (
  <main className="flex flex-col items-center justify-between p-24">
-
-      <div className=" max-w-5xl w-full mb-16">
+<div className='flex justify-center'>
+<div className=" max-w-5xl w-full mb-16">
         <div className="relative flex place-items-center before:absolute before:h-[200px] before:w-[480px] before:-translate-x-1/4 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-3xl before:content-[''] after:absolute after:-z-20 after:h-[150px] after:w-[320px] after:translate-x-1/5 after:bg-gradient-conic after:from-sky-200 after:via-blue-300 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-10 before:dark:opacity-10 dark:after:blur-3xl ">
           <div className="text-5xl relative dark:drop-shadow-md-[0_0_0.3rem_#ffffff70] dark:text-white">
             <h1 className="font-semibold">Bruno Ignacio Gallardo</h1>
@@ -17,6 +18,9 @@ export default function Presentation() {
         </div><br/>
         <Image src={logo}  alt="faud UNC" width={200} height='auto' className='relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert'/>
       </div>
+      <Image src={qr}  alt="faud UNC" width={230} height='auto' className='relative self-start ml-60 dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert'/>
+</div>
+    
 
       <div className='mt-11 mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left'>
       

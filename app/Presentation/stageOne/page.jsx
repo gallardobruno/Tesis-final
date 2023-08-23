@@ -260,7 +260,7 @@ export default function StageOne() {
       </div>
       </li>
     </ul>
-    <div>
+    <div><br/><br/>
     <p>Teniendo en cuenta esto, el enfoque buscado será diseñar un soporte arquitectónico que impulse y facilite la investigación y desarrollo de actividades Marinas en el Golfo San Jorge.<br/><br/>
     Se centrará en crear un centro de investigación marina innovador y colaborativo, que permita diversas investigaciones, relacionadas con energías oceanicas, acuicultura, bioprospección marina y tecnologías aplicadas.<br/><br/>
     Este centro de investigación marina se integraría en la red existente de instituciones educativas y de investigación, en colaboración con la Universidad de la Patagónia Austral y bajo el asesoramiento y promoción del CONICET, logrando alianzas con instituciones locales. Su enfoque seía interdisciplinario, abordando desde la ingeniería hasta la biología marina y facilitando colaboraciones entre investigadores nacionales e internacionales.</p>
