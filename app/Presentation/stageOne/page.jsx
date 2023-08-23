@@ -3,6 +3,13 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { añadirEtapa } from '../../store/SliceOne';
+import Image from 'next/image';
+import marArgentino from '../../../public/espacios_maritimos.png'
+import billGates from '../../../public/bill gates.png'
+import mapArgentina from '../../../public/Blank_Argentina_Map.png'
+import golfo from '../../../public/Golfo-San-Jorge.png'
+import caleta from '../../../public/ArcGIS.png'
+import Video from '../../Components/youTubeVideo'
 
 export default function StageOne() {
   const dispatch=useDispatch();
@@ -19,27 +26,27 @@ export default function StageOne() {
   };
 
   return (
-    <div className="flex-col sm:mx-4 md:mx-4"> 
-
-<div>
+    <div className="flex-col">    
+<div className="scrollable-div">
+  <div className="flex justify-center w-full h-screen sm:items-center bg-black">
+    <div className="flex-col flex items-center justify-center max-w-5xl w-full text-white">
+      <h1 className="font-sans text-5xl font-semibold tracking-wide ">
+      <p>CENTRO DE INVESTIGACIÓN MARINA</p>
+      </h1><br/>
+      <p className='font-sans font-light text-lg'>Educación de formación avanzada en energías renovables y nuevos recursos para la cuenca del Golfo San Jorge</p>
+      <div>
 {estadoEtapa1 === 'noIniciada' && (
         <button onClick={handleContinuar} className="btn-comenzar">
           Comencemos
         </button>
       )}
 </div>
-      
-
-  <div className="flex justify-center w-full h-screen sm:items-center bg-black">
-    <div className="flex-col flex items-center justify-center max-w-5xl w-full text-white">
-      <h1 className="font-sans text-5xl font-semibold ">
-      ETAPA 1
-      </h1><br/>
-      <p>ESTUDIO DEL TEMA PROBLEMA</p>
     </div>
   </div>
+  </div>
 
-  <div className="flex justify-center w-full h-screen sm:py-10">
+<div className="scrollable-div">
+<div className="flex justify-center w-full h-screen sm:py-10">
     <div className="max-w-5xl w-full">
      <div className="pt-32">
       <p className="font-semibold">ETAPA 1 | ESTUDIO DEL TEMA PROBLEMA</p>
@@ -49,45 +56,238 @@ export default function StageOne() {
      </div>
     </div>
   </div>
+</div>
 
+
+<div className="scrollable-div">
   <div className="flex justify-center w-full h-screen sm:relative">
     <div className="max-w-5xl w-full">
     <div className="flex justify-end text-white"><p className="bg-black">Pág 01</p></div><br/>
      <section className="pt-22">
-      <p className="text-2xl font-semibold">PROPUESTA DE ESCENARIO:</p><br/>
-      <p>En el horizonte temporal orientado a futuro, Córdoba 2030 se perfila como un escenario de transformación clave. Donde el enfoque está en revitalizar el sur de la ciudad para impulsar su economía, mejorar la logística y promover condiciones sociales óptimas. Esta visión toma forma en respuesta al anhelo de Argentina de ser anfitriona del Mundial 2030, un catalizador que ya inspira desarrollos urbanos e infraestructurales en diversos puntos del país.</p><br/>
-      <p>Córdoba, por su cultura, historia y posicionamiento estratégico, se alza como un lienzo propicio para este proyecto. Con estos elementos como guía, trazaremos un camino hacia el año 2030, donde la ciudad emerja como un modelo de adaptación urbana.</p>
+      <p className="text-2xl font-semibold">TEMA-PROBLEMA</p>
+      <p className="text-2xl font-normal">3 Escalas</p><br/>
+      <p className="text-2xl font-light">GLOBAL:</p><br/>
+
+      <ol className='list-decimal list-inside'>
+  <li>Automatización y Reemplazo de Puestos de Trabajo:
+    <ul className='list-disc list-inside pl-4'>
+      <li>Avance tecnológico y automatización en diversas industrias.</li>
+      <li>Potencial desplazamiento de trabajadores por la adopción de tecnologías.</li>
+    </ul>
+  </li><br/>
+
+  <li>Era de la Información y Telecomunicaciones:
+<ul className='list-disc list-inside pl-4'>
+      <li>Impacto de la revolución digital en la forma en que accedemos y compartimos información.</li>
+      <li>Cambio en la dinámica social, económica y cultural debido a la digitalización.</li>
+    </ul>
+  </li><br/>
+
+  <li>Impacto en la Educación con Carreras Obsoletas:
+<ul className='list-disc list-inside pl-4'>
+      <li>Desafíos de mantenerse actualizado en un entorno de rápido cambio tecnológico.</li>
+      <li>Exploración de nuevas modalidades de aprendizaje y capacitación para mantener la relevancia.</li>
+    </ul>
+  </li><br/>
+
+  <li>Nuevos Enfoques:
+<ul className='list-disc list-inside pl-4'>
+      <li>Carreras sobre Inteligencia Artificial y computación.</li>
+      <li>Carreras en Biología y Avances Cientificos.</li>
+      <li>Carreras sobre exploración de energias renovables u optimizacion de las convencionales.</li>
+    </ul>
+  </li>
+</ol>
      </section><br/>
     </div>
   </div>
+  </div>
 
-  <div className="flex justify-center w-full h-screen sm:relative sm:pt-20">
+
+  <div className="scrollable-div">
+  <div className="flex justify-center w-full h-screen sm:relative">
     <div className="max-w-5xl w-full">
     <div className="flex justify-end text-white"><p className="bg-black">Pág 02</p></div><br/>
-     <section className="">
-      <p className="text-2xl font-semibold">PROBLEMA:</p><br/>
-      <p>Desde una perspectiva crítica, es innegable que Argentina enfrenta diversas prioridades en su agenda política antes de considerar la posibilidad de ser anfitriona, sin embargo, en caso de volverse inevitable, debemos como profesionales explorar de qué manera un acontecimiento de tal envergadura puede ser concebido estratégicamente para catalizar la revalorización de múltiples aspectos, incluyendo reestructuración urbana, normativas actualizadas, optimización de equipamiento, expansión de espacios verdes y la mejora de la cohesión social.</p><br/>
-      <p>La capacidad creativa y técnica de los profesionales de la arquitectura se vuelve esencial para concebir un enfoque integral que no solo celebre el deporte, sino que también genere un impacto duradero en la calidad de vida de la comunidad y en la configuración misma de la ciudad.</p><br/>
-      <p>En el presente estudio, nuestra atención se enfoca en el sector sur de Córdoba, un área que se encuentra en una posición periférica con respecto al resto de la ciudad. Este sector está caracterizado por una serie de desafíos que delimitan su desarrollo. Entre estos, una fragmentación marcada por la ausencia de infraestructuras viales que conecten eficientemente en dirección este-oeste. </p><br/>
-      <p>La estructura urbana se ve impactada por proyectos urbanos de baja densidad y un enfoque monofuncional, lo que limita la integración y la cohesión social. La ocupación del territorio en este sector tiende a ser especulativa y desarticulada, lo que a su vez afecta la planificación y el crecimiento ordenado.</p><br/>
-      <p>Por otro lado, coexisten realidades disímiles, como asentamientos informales, zonas industriales y áreas rurales, creando una complejidad en la dinámica urbana. La coexistencia de estos elementos plantea desafíos en términos de compatibilidad y desarrollo equitativo.</p><br/>
+     <section>
+    <Image
+  src={billGates}
+  alt="espacios marítimos"
+  width={1000}
+  height='auto'
+  className="relative"
+/>
      </section><br/>
     </div>
   </div>
+  </div>
 
-  <div className="flex justify-center w-full h-screen sm:relative sm:pt-100">
+
+  <div className="scrollable-div">
+  <div className="flex justify-center w-full h-screen sm:relative">
     <div className="max-w-5xl w-full">
-    <div className="flex justify-end text-white"><p className="bg-black">Pág 03</p></div>
-     <section className="">
-      <p className="text-2xl font-semibold">PREMISAS:</p><br/>
-      <p>La selección de este sector como objeto de estudio se justifica por una circunstancia de importancia considerable. Un extenso terreno de 250 hectáreas, enclavado entre las rutas 5 y 36, ha sido adquirido por un club cordobés. Este acto trasciende el ámbito deportivo, ya que está respaldado por una visión de transformación urbana. En este terreno, se proyecta una iniciativa de desarrollo de carácter residencial, educativo y deportivo. Donde además se plantéa la edificación de un estadio/universidad que aspira a convertirse en sede del mencionado mundial.</p><br/>
-      <p>Se pretende tomar esta iniciativa ya en marcha, para evaluar que impacto tendra en la zona. Teniendo en cuenta los problemas del sector y las nuevas premisas de diseño urbano contemporáneo, abordando conceptos cruciales como la sostenibilidad, el urbanismo virtual, la inclusión social, la densificación y la resiliencia urbana, entre otros.</p><br/>
-      <p>La iniciativa en curso cobra aún mayor profundidad al considerar la creación de una universidad del fútbol dentro del mismo estadio. Este aspecto amplía significativamente su alcance y potencial de transformación. Más allá de la dimensión deportiva, esta universidad emerge como un faro de oportunidades en un entorno cambiante y desafiante.</p><br/>
-      <p>Su misión de profesionalizar todas las áreas relacionadas con el fútbol no solo genera un impulso en la industria deportiva, sino que también responde a las necesidades contemporáneas. En una era donde avances tecnológicos como la inteligencia artificial y el teletrabajo están alterando el panorama laboral, esta universidad representa una respuesta visionaria. Aprovechar la sólida base futbolística arraigada en Argentina para generar empleos y carreras adaptadas a los tiempos actuales es un enfoque estratégico y pragmático.</p><br/>
-      <p>En este contexto más amplio, el proyecto se convierte en un lienzo en el que convergen estas premisas. Su potencial esencial no solo radica en la resolución de desafíos urbanos y sociales, sino también en la reinvención misma del sector. La universidad del fútbol, como un componente integral, forja un camino hacia un futuro revitalizado y de nuevas oportunidades, donde el deporte, la educación y el diseño urbano convergen en beneficio de la comunidad y la ciudad en su conjunto..</p><br/>
-     </section>
+    <div className="flex justify-end text-white"><p className="bg-black">Pág 03</p></div><br/>
+     <section className="pt-22">
+      <p className="text-2xl font-light">REGIONAL (Argentina):</p><br/>
+
+      <ol className='list-decimal list-inside'>
+  <li>Deficiencia en recuros marítimos y control territorial:</li>
+</ol>
+    <Image
+  src={marArgentino}
+  alt="espacios marítimos"
+  width={1000}
+  height='auto'
+  className="relative"
+/>
+
+     </section><br/>
     </div>
   </div>
+  </div>
+
+
+  <div className="scrollable-div">
+  <div className="flex justify-center w-full h-screen sm:relative">
+    <div className="max-w-5xl w-full">
+    <div className="flex justify-end text-white"><p className="bg-black">Pág 04</p></div><br/>
+     <section>
+      <Video/>
+     </section><br/>
+    </div>
+  </div>
+  </div>
+
+  <div className="scrollable-div">
+  <div className="flex justify-center w-full h-screen sm:relative">
+    <div className="max-w-5xl w-full">
+    <div className="flex justify-end text-white"><p className="bg-black">Pág 05</p></div><br/>
+     <section>
+     <ul className='list-disc list-inside pl-4'>
+      <li>Falta de tecnologías y logística para el control del espacio Maritimo.</li>
+      <li>Falta de conciencia oceanica.</li>
+      <li>Extraccion de recursos marítimos por parte de otros paises de forma ilegal.</li>
+      <li>Falta de soberanía nacional sobre nuestros territorios, con consecuencias políticas y económicas a futuro.</li>
+    </ul>
+     </section><br/>
+    </div>
+  </div>
+  </div>
+
+  <div className="scrollable-div">
+  <div className="flex justify-center w-full h-screen sm:relative">
+    <div className="max-w-5xl w-full">
+    <div className="flex justify-end text-white"><p className="bg-black">Pág 06</p></div><br/>
+     <section className="pt-22">
+      <p className="text-2xl font-light">LOCAL (Caleta Olivia, Santa Cruz):</p><br/>
+
+      <ol className='list-decimal list-inside'>
+  <li>Enfoque en un único motor económico:
+    <ul className='list-disc list-inside pl-4'>
+      <li>El petróleo en la provincia de Santa Cruz es equivalente al 52% del producto bruto interno, según informe del CIPPEC.</li>
+    </ul>
+  </li><br/>
+
+  <li>Poco incentívo provincial de promover la Investigación:
+<ul className='list-disc list-inside pl-4'>
+      <li>Santa Cruz es la única provincia del pais que no cuenta con una unidad ejecutora del CONICET, según el secretario de ciencias y tecnología de la UNPA.</li>
+      <li>Fuente: <a href="https://www.unpa.edu.ar/noticia/avanzan-las-gestiones-para-crear-una-unidad-ejecutora-del-conicet-en-santa-cruz">
+      www.unpa.edu.ar/noticia/avanzan-las-gestiones-para-crear-una-unidad-ejecutora
+</a>.</li>
+    </ul>
+  </li><br/>
+
+  <li>Instituciones que trabajan por separado:
+<ul className='list-disc list-inside pl-4'>
+      <li>UNPA (Universidad de la Patagonia Austral).</li>
+      <li>Puerto Caleta Paula.</li>
+      <li>Planta de Osmosis inversa</li>
+      <li>Prefectura Naval Argentina</li>
+      <li>EICO (Escuela Industrial Caleta Olivia)</li>
+      <li>EBIMAR (Escuela de Biología Marina y laboratorio)</li>
+    </ul>
+  </li><br/>
+</ol>
+     </section><br/>
+    </div>
+  </div>
+  </div>
+
+
+  <div className="scrollable-div">
+  <div className="flex justify-center w-full h-screen">
+    <div className="max-w-5xl w-full">
+    <div className="flex justify-end text-white"><p className="bg-black">Pág 07</p></div><br/>
+     <section className="">
+      <p className="text-2xl font-semibold">HIPÓTESIS:</p><br/>
+      <div className='flex justify-center justify-between'>
+      <Image
+  src={mapArgentina}
+  alt="espacios marítimos"
+  width={270}
+  height='auto'
+  className="relative"
+/>
+<div>
+<Image
+  src={golfo}
+  alt="espacios marítimos"
+  width={500}
+  height='auto'
+  className="relative"
+/>
+      </div>
+      </div>
+     </section><br/>
+    </div>
+  </div>
+  </div>
+
+
+  <div className="scrollable-div">
+  <div className="flex justify-center w-full h-screen">
+    <div className="max-w-5xl w-full">
+    <div className="flex justify-end text-white"><p className="bg-black">Pág 06</p></div><br/>
+     <section className="">
+      <p>Luego de realizar un mapeo de la ciudad y de las instituciones que ya estudian este tema a nivel país se sacaron las siguientes conclusiónes:.</p><br/>
+      <ul className='list-disc list-inside pl-4'>
+      <li>Por un lado, una clara ausencia de instituciones que investiguen sobre el Golfo del lado Santa Cruz.</li>
+      <li>Las instituciones que vienen investigando el tema marítimo, enfocan sus estudios a:<br/><br/>
+      <div className='pl-4'>
+      a) Acuicultura y Agricultura marina: cultivo de organismos marinos para consumo humano.<br/>
+          b) Investigación de ecosistemas Marinos: exploración de la biodiversidad marina, dinámica de ecosistemas costeros y marinos, ponen en importancia la conservación y restauración<br/>
+          c) Tecnologías Marinas: tecnologías de exploración, observación y monitoreo de los oceanos, recolección de datos oceanográficos<br/>
+          d) esalinización y tratamiento de agua marina, investigaciones sobre métodos innovadores de desalinización y purificación de agua marina para consumo humano e industria.
+      </div>
+      </li>
+    </ul>
+    <div>
+    <p>Teniendo en cuenta esto, el enfoque buscado será diseñar un soporte arquitectónico que impulse y facilite la investigación y desarrollo de actividades Marinas en el Golfo San Jorge.<br/><br/>
+    Se centrará en crear un centro de investigación marina innovador y colaborativo, que permita diversas investigaciones, relacionadas con energías oceanicas, acuicultura, bioprospección marina y tecnologías aplicadas.<br/><br/>
+    Este centro de investigación marina se integraría en la red existente de instituciones educativas y de investigación, en colaboración con la Universidad de la Patagónia Austral y bajo el asesoramiento y promoción del CONICET, logrando alianzas con instituciones locales. Su enfoque seía interdisciplinario, abordando desde la ingeniería hasta la biología marina y facilitando colaboraciones entre investigadores nacionales e internacionales.</p>
+    </div>
+     </section><br/>
+    </div>
+  </div>
+  </div>
+
+
+  <div className="scrollable-div">
+  <div className="flex justify-center w-full h-screen sm:relative">
+    <div className="max-w-5xl w-full">
+    <div className="flex justify-end text-white"><p className="bg-black">Pág 07</p></div><br/>
+     <section>
+    <Image
+  src={caleta}
+  alt="espacios marítimos"
+  width={1200}
+  height='auto'
+  className="relative"
+/>
+     </section><br/>
+    </div>
+  </div>
+  </div>
+
 
 <div className='flex justify-center sm:relative sm:mt-4'>
 {estadoEtapa1 === 'enProceso' && (

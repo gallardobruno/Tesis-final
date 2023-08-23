@@ -22,8 +22,8 @@ export default function RootLayout({ children }) {
       <body className={`min-h-screen {inter.className}`}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div>
-              <header className='flex relative justify-end px-24' >
-                <div className='fixed top-0 mt-4 mw-full flex space-x-2'>
+              <header className=' ' >
+                <div className='flex justify-end px-24 space-x-2 fixed top-0 py-2 w-full bg-opacity-20 backdrop-blur-sm bg-gray-100'>
                 <GoToHome /><ModeToggle />
                 </div>
               </header>
